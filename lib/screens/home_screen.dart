@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pemrograman_mobile/screens/profil_screen.dart';
 import 'budget/budget_list_screen.dart';
-import 'bill/bill_calendar_screen.dart';
+import 'bill/bill_calender_screen.dart';
 import 'profil_screen.dart';
 import 'login_screen.dart';
 
@@ -78,7 +78,7 @@ class HomeScreen extends StatelessWidget {
               title: const Text('Tagihan keluar/masuk'),
               onTap: () {
                 Navigator.pop(context);
-                Get.to(() => const BillCalendarScreen());
+                Get.to(() => const BillCalenderScreen());
               },
             ),
             ListTile(
@@ -119,35 +119,35 @@ class HomeScreen extends StatelessWidget {
                 color: Color.fromARGB(200, 255, 0, 140),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
                 children: [
                   _buildDashboardCard(
-                    title: 'Budget',
+                    title: 'Pemasukkan',
                     icon: Icons.attach_money,
-                    color: Colors.green,
+                    color: const Color.fromARGB(255, 166, 0, 185),
                     onTap: () => Get.to(() => const BudgetListScreen()),
                   ),
                   _buildDashboardCard(
                     title: 'Tagihan',
                     icon: Icons.calendar_month,
-                    color: Colors.red,
-                    onTap: () => Get.to(() => const BillCalendarScreen()),
+                    color: const Color.fromARGB(220, 193, 8, 159),
+                    onTap: () => Get.to(() => const BillCalenderScreen()),
                   ),
                   _buildDashboardCard(
                     title: 'Profile',
                     icon: Icons.person,
-                    color: Colors.blue,
+                    color: const Color.fromARGB(255, 255, 0, 183),
                     onTap: () => Get.to(() => const ProfileScreen()),
                   ),
                   _buildDashboardCard(
                     title: 'Settings',
                     icon: Icons.settings,
-                    color: Colors.purple,
+                    color: const Color.fromARGB(255, 217, 4, 150),
                     onTap: () {
                       Get.snackbar('Info', 'Fitur Settings segera hadir!');
                     },

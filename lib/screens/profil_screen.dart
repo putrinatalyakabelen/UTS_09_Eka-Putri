@@ -67,7 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profil'),
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 219, 0, 131),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -90,7 +90,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           : null,
                     ),
                     IconButton(
-                      icon: const Icon(Icons.camera_alt, color: Colors.blue),
+                      icon: const Icon(Icons.camera_alt, color: Color.fromARGB(255, 245, 0, 183)),
                       onPressed: _pickImage,
                     ),
                   ],
@@ -119,7 +119,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ElevatedButton(
                   onPressed: _saveProfile,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
+                    backgroundColor: const Color.fromARGB(255, 240, 0, 156),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 40, vertical: 12),
                   ),
